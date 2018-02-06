@@ -10,7 +10,7 @@ body {
 header {
 	background-image: url("../images/background.jpg");
 	background-size: 100% 100%;
-	height: 856px;
+	height: 600px;
 	opacity: 0.9;
 	position: relative;
 	z-index: 9;
@@ -19,7 +19,7 @@ header {
 #menuList ul {
     list-style-type: none;
     margin: 0 auto;
-    padding-left: 430px;
+    padding-left: 320px;
     overflow: hidden;
     background-color: #3d0c29;
     position: fixed;
@@ -127,7 +127,7 @@ header {
 /*text*/
 .mainText {
 	font-family: 'Open Sans';
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: bold;
 	padding: 10px;
 	color: #3d0c29;
@@ -155,16 +155,22 @@ header {
  	text-transform: uppercase;
 }
 
-.block1, .block2, .block3 {
+.block1, .block2, .block3, .block4 {
+	width: 25%;
+	float: right;
+}
+
+.block5, .block6, .block7 {
 	width: 33%;
 	float: right;
 }
+
 
 .bigTitle3 {
 	font-family: "Open Sans";
 	text-align: center;
 	font-size: 25px;
-	font-weight: bolder;
+	font-weight: bold;
 	color: #236988;
 	text-shadow: 1px 1px 2px #000000;
 }
@@ -177,11 +183,46 @@ header {
 	color: #3d0c29;
 }
 
+
+.block8 {
+	width: 33%;
+	float: right;
+}
+
+
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.block8:hover .image {
+  opacity: 0.3;
+}
+
+.block8:hover .middle {
+  opacity: 1;
+}
+
 /*slider*/
 .flexslider {
-	width: 50%;
+	width: 33%;
 	position: relative;
-	left: 25%;
+	left: 33%;
 	box-shadow: 10px 10px 30px #633c53;
 }
 
@@ -206,11 +247,19 @@ header {
 	height: 30px;
 } 
 
+#port {
+	width: 300px; 
+    height: 180px; 
+    border:2px solid #dbeef6; 
+    box-shadow: 5px 7px 8px #28799c; 
+    border-radius: 5px;
+}
+
 /*contact*/
 .footer {
 	background-image: url("../images/footer.jpg");
 	background-size: 100% 100%;
-	height: 400px;
+	height: 100px;
 	opacity: 0.9;
 }
 
@@ -237,50 +286,6 @@ header {
 	background-color: #236988;
 } 
 
-#name {
-	border-radius: 10px;
-	border: none;
-	display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: "Open Sans";
-	font-size: 12px;
-	width: 150px;
-	margin-left: 450px;
-	margin-top: 50px;
-	margin-bottom: 30px;
-	float: left;
-}
-#email {
-	border-radius: 10px;
-	border: none;
-	display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: "Open Sans";
-	font-size: 12px;
-	width: 150px;
-	margin-right: 450px;
-	margin-top: 14px;
-	margin-bottom: 30px;
-	float: right;
-}
-
-#message {
-	padding: 30px 50px;
-	border-radius: 10px;
-	border: none;
-	display: block;
-    text-align: center;
-    text-decoration: none;
-    font-family: "Open Sans";
-	font-size: 12px;
-	width: 350px;
-	margin: 0 auto;
-	margin-top: 20px;
-}
 
 /*icons*/
 #fb {
@@ -299,12 +304,17 @@ header {
 
 #copyright {
 	font-family: "Open Sans";
-	font-size: 20px;
-	text-align: center;
-	padding: 10px;
+	font-size: 12px;
+	text-align: right;
+	padding-top: 80px;
 	color: white;
 }
 
+/*img {
+	width: 450px; 
+	height: 100px; 
+	border:3px solid #236988;
+}*/
 
 
 @media only screen and (max-width: 1024px) {
@@ -312,19 +322,6 @@ header {
 	   	    padding-left: 230px;
 		   }
 
-	#name {
-		width: 200px;
-		margin-left: 250px;
-	} 
-
-	#email {
-		width: 200px;
-		margin-right: 250px;
-	}
-
-	#message {
-		width: 410px;
-	}  
 }
 
 @media only screen and (max-width: 640px) {
@@ -340,20 +337,6 @@ header {
 	#menuList ul {
 	   	    padding-left: 50px;
 		   }
-
-	#name {
-		width: 150px;
-		margin-left: 100px;
-	} 
-
-	#email {
-		width: 150px;
-		margin-right: 100px;
-	}
-
-	#message {
-		width: 325px;
-	}  
 
 	#fb, #in ,#copyright {
 	display: none;
